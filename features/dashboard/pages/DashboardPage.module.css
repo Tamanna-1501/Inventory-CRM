@@ -1,0 +1,8 @@
+.loading { display: grid; gap: var(--space-4); max-width: 1680px; margin: 0 auto; padding: var(--space-3) 0; }
+.skeletonGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+.errorPage { --color-white: var(--app-card); --color-navy: var(--color-text); display: grid; min-height: 60vh; place-items: center; }
+.errorCard { display: grid; justify-items: start; gap: var(--space-3); width: min(480px, 100%); padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-white); box-shadow: var(--shadow-card); }
+.errorIcon { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 12px; color: var(--color-danger-text); background: var(--color-danger-soft); }
+.errorCard h1 { margin: 0; font-size: var(--font-size-page-title); }
+.errorCard p { margin: 0 0 var(--space-2); color: var(--color-text-muted); font-size: var(--font-size-body); }
+@media (max-width: 767px) { .skeletonGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .errorCard { padding: var(--space-4); } }

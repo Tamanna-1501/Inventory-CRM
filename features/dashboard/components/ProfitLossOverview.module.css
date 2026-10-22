@@ -1,0 +1,16 @@
+.summary { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-2); padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-strip); }
+.summaryIcon { display: grid; width: 44px; height: 44px; flex: 0 0 44px; place-items: center; border-radius: 13px; color: var(--color-brand); background: var(--color-warning-soft); }
+.summary > div { display: grid; gap: var(--space-1); min-width: 0; }
+.summary span:not(.summaryIcon) { color: var(--color-text-muted); font-size: var(--font-size-label); }
+.summary strong { color: var(--color-success-text); font-size: var(--font-size-card-title); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.summary .negative { color: var(--color-price); }
+.chart { width: 100%; height: 220px; min-width: 0; }
+.legend { display: flex; justify-content: flex-end; gap: var(--space-4); padding: 0 var(--space-3) var(--space-3); color: var(--color-text-muted); font-size: var(--font-size-label); }
+.legend span { display: inline-flex; align-items: center; gap: var(--space-2); }
+.legend i { width: 10px; height: 10px; border-radius: 50%; }
+.profitDot { background: var(--color-success); }
+.lossDot { background: var(--color-danger); }
+.note { margin: var(--space-2) 0 0; color: var(--color-text-muted); font-size: var(--font-size-label); line-height: var(--line-height-body); }
+@media (max-width: 520px) { .chart { height: 220px; } }
+
+.reportCard { height: 100%; border-color: var(--color-border-strong); border-radius: var(--radius-card); background: var(--color-white); box-shadow: var(--shadow-card); }

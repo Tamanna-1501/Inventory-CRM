@@ -1,0 +1,1 @@
+.page{display:grid;gap:var(--space-5)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--space-4)}.grid a{text-decoration:none;color:var(--color-text)}

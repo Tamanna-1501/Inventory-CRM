@@ -1,0 +1,88 @@
+.page {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  max-width: 1280px;
+  gap: var(--space-4);
+  margin: 0 auto;
+  container-name: purchase-composer;
+  container-type: inline-size;
+}
+
+.form {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-4);
+}
+
+.grid {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.itemList {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.item {
+  display: grid;
+  min-width: 0;
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    repeat(2, minmax(0, 1fr))
+    repeat(3, minmax(0, .8fr))
+    auto;
+  align-items: end;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.total strong {
+  font-size: var(--font-size-card-title);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.error {
+  margin: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-input);
+  color: var(--color-danger-text);
+  background: var(--color-danger-soft);
+}
+
+@container purchase-composer (max-width: 960px) {
+  .item {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@container purchase-composer (max-width: 650px) {
+  .grid,
+  .item {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

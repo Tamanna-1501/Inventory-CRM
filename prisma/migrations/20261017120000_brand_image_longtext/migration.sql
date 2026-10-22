@@ -1,0 +1,1 @@
+ALTER TABLE `Brand` MODIFY `image` LONGTEXT NULL;

@@ -1,0 +1,12 @@
+.dashboardCard { border: 1px solid var(--color-border-strong); border-radius: var(--radius-card); background: var(--color-white); box-shadow: var(--shadow-card); }
+.list { display: grid; margin: 0; padding: 0; list-style: none; }
+.user { display: flex; min-width: 0; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border); }
+.user:last-child { border-bottom: 0; }
+.avatar { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; border-radius: 14px; color: var(--color-navy); background: var(--color-info-soft); font-size: var(--font-size-body); font-weight: 750; }
+.identity,.details { display: grid; min-width: 0; gap: var(--space-1); }
+.identity { flex: 1; }
+.identity strong,.identity span,.details strong,.details span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.identity strong,.details strong { color: var(--color-navy); font-size: var(--font-size-label); }
+.identity span,.details span { color: var(--color-text-muted); font-size: var(--font-size-label); }
+.details { max-width: 145px; justify-items: end; text-align: right; }
+@media (max-width: 520px) { .user { gap: var(--space-2); }.details { max-width: 120px; } }

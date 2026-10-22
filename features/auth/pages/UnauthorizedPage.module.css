@@ -1,0 +1,11 @@
+.content { display: grid; justify-items: center; text-align: center; }
+.icon { display: grid; width: 58px; height: 58px; place-items: center; margin-bottom: var(--space-4); border: 1px solid var(--color-danger); border-radius: 17px; color: var(--color-danger-text); background: var(--color-danger-soft); }
+.kicker { margin: 0 0 var(--space-2); color: var(--color-danger-text); font-size: var(--font-size-label); font-weight: 800; letter-spacing: .1em; }
+.content h2 { margin: 0; color: var(--color-navy); font-size: clamp(28px, 5vw, 34px); font-weight: 800; letter-spacing: -.025em; }
+.description { margin: var(--space-3) 0 0; color: var(--color-text-muted); font-size: var(--font-size-body); line-height: 1.65; }
+.actions { display: grid; width: 100%; gap: var(--space-3); margin-top: var(--space-5); }
+.action { display: inline-flex; min-height: var(--control-height); align-items: center; justify-content: center; padding: 0 var(--space-4); border: 1px solid var(--color-brand); border-radius: var(--radius-button); color: var(--color-on-brand); background: var(--color-brand); font-size: var(--font-size-body); font-weight: 700; text-decoration: none; transition: background var(--duration-fast); }
+.action:hover { background: var(--color-brand-hover); }
+.action:focus-visible, .loginLink:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
+.loginLink { justify-self: center; color: var(--color-navy); font-size: var(--font-size-body); font-weight: 700; text-underline-offset: 4px; }
+.loginLink:hover { color: var(--color-brand-text); }

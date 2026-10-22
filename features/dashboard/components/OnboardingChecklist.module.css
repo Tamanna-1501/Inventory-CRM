@@ -1,0 +1,21 @@
+.card { margin: 0; padding: var(--space-4); border: 1px solid var(--color-border-strong); border-radius: var(--radius-card); background: var(--color-white); box-shadow: var(--shadow-card); }
+.heading { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); }
+.icon { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; border-radius: 11px; color: var(--color-yale); background: var(--color-surface-blue); }
+.title { min-width: 0; flex: 1; }
+.title h2 { margin: 0; font-size: var(--font-size-card-title); }
+.title p { margin: 3px 0 0; color: var(--color-text-muted); font-size: var(--font-size-body); }
+.progressLabel { padding: 7px 10px; border: 1px solid var(--color-border); border-radius: var(--radius-pill); color: var(--color-text-muted); font-size: var(--font-size-label); white-space: nowrap; }
+.progressTrack { height: 8px; overflow: hidden; margin-bottom: var(--space-3); border-radius: var(--radius-pill); background: var(--color-surface-blue); }
+.progressFill { display: block; width: var(--progress); height: 100%; border-radius: inherit; background: var(--color-yale); transition: width var(--duration-normal) var(--ease-standard); }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+.step { display: flex; min-width: 0; align-items: center; gap: var(--space-2); padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-input); background: var(--color-porcelain); }
+.done { border-color: var(--color-success); background: var(--color-success-soft); }
+.stepMark { display: grid; width: 32px; height: 32px; flex: 0 0 32px; place-items: center; border-radius: 9px; color: var(--color-yale); background: var(--color-white); }
+.done .stepMark { color: var(--color-on-success); background: var(--color-success); }
+.stepCopy { display: grid; min-width: 0; gap: 3px; }
+.stepCopy strong { font-size: var(--font-size-body); }
+.meta,.stepLink { color: var(--color-text-muted); font-size: var(--font-size-label); line-height: 1.35; }
+.stepLink { width: fit-content; color: var(--color-yale); font-weight: 700; text-underline-offset: 3px; }
+.stepLink:hover { color: var(--color-ink); }
+@media (max-width: 520px) { .heading { align-items: flex-start; flex-wrap: wrap; } .progressLabel { margin-left: 54px; } }
+@media (prefers-reduced-motion: reduce) { .progressFill { transition: none; } }

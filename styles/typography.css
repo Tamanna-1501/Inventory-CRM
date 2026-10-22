@@ -1,0 +1,52 @@
+body {
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: var(--line-height-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-text);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: var(--font-size-page-title);
+  font-weight: 700;
+}
+
+h2,
+h3 {
+  font-size: var(--font-size-card-title);
+  font-weight: 650;
+}
+
+small,
+.textMuted {
+  color: var(--color-text-muted);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 26px;
+  }
+}

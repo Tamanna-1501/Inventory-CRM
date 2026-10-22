@@ -1,0 +1,10 @@
+.dashboardCard { border: 1px solid var(--color-border-strong); border-radius: var(--radius-card); background: var(--color-white); box-shadow: var(--shadow-card); }
+.list { display: grid; margin: 0; padding: 0; list-style: none; }
+.product { display: flex; min-width: 0; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border); }
+.product:last-child { border-bottom: 0; }
+.icon { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; border-radius: 13px; color: var(--color-brand); background: var(--color-warning-soft); }
+.name { display: grid; min-width: 0; flex: 1; gap: var(--space-1); }
+.name strong,.name span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.name strong { color: var(--color-navy); font-size: var(--font-size-body); }
+.name span { color: var(--color-text-muted); font-size: var(--font-size-label); }
+.price { color: var(--color-navy); font-size: var(--font-size-label); white-space: nowrap; }

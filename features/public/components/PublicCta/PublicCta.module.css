@@ -1,0 +1,11 @@
+.section { padding: clamp(48px, 7vw, 88px) 24px; color: var(--color-navy); background: var(--color-white); }
+.inner { position: relative; isolation: isolate; display: flex; overflow: hidden; width: min(100%, 1160px); min-height: 250px; align-items: center; justify-content: space-between; gap: var(--space-5); margin: 0 auto; padding: clamp(30px, 5vw, 58px); border: 1px solid var(--color-on-dark-border); border-radius: 20px; color: var(--color-white); background: var(--color-navy); box-shadow: var(--shadow-card); }
+.inner::before { position: absolute; z-index: -1; top: -120px; right: 18%; width: 300px; height: 300px; border: 1px solid var(--color-on-dark-border); border-radius: 50%; background: radial-gradient(circle, var(--color-brand-glow), transparent 68%); content: ''; }
+.inner::after { position: absolute; z-index: -1; right: 0; bottom: 0; width: 28%; height: 5px; border-radius: 8px 0 0; background: var(--color-brand); content: ''; }
+.eyebrow { margin: 0 0 var(--space-2); color: var(--color-star); font-size: var(--font-size-label); font-weight: 800; letter-spacing: .1em; }
+.inner h2 { max-width: 670px; margin: 0; color: var(--color-white); font-size: clamp(30px, 4vw, 42px); letter-spacing: -.02em; line-height: 1.12; }
+.inner p:last-child { margin: var(--space-2) 0 0; color: var(--color-on-dark-muted); font-size: var(--font-size-body); line-height: 1.6; }
+.button { display: inline-flex; min-height: 52px; flex: 0 0 auto; align-items: center; justify-content: center; gap: var(--space-2); padding: 0 22px; border: 1px solid var(--color-brand); border-radius: var(--radius-button); color: var(--color-on-brand); background: var(--color-brand); font-size: var(--font-size-body); font-weight: 750; text-decoration: none; box-shadow: 0 8px 22px var(--color-brand-glow); transition: background var(--duration-fast), transform var(--duration-fast), box-shadow var(--duration-fast); }
+.button:hover { background: var(--color-brand-hover); transform: translateY(-2px); box-shadow: 0 12px 26px var(--color-brand-glow); }
+.button:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
+@media (max-width: 760px) { .section { padding: 44px 20px; }.inner { min-height: 0; align-items: flex-start; flex-direction: column; padding: 30px 24px; }.inner h2 { font-size: clamp(28px, 8vw, 36px); }.button { width: 100%; } }

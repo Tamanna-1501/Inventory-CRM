@@ -1,0 +1,103 @@
+.page {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  max-width: 1200px;
+  gap: var(--space-4);
+  margin: 0 auto;
+  container-name: add-product;
+  container-type: inline-size;
+}
+
+.form {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  gap: var(--space-4);
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.footerButton {
+  border-radius: var(--radius-button);
+}
+
+.upload {
+  position: relative;
+  display: flex;
+  min-height: var(--control-height);
+  min-width: 0;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0 var(--space-3);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-input);
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.upload:hover,
+.upload:focus-within {
+  border-color: var(--color-brand);
+}
+
+.upload:focus-within {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-focus);
+}
+
+.file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.preview {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin-top: var(--space-2);
+  border-radius: var(--radius-input);
+  object-fit: cover;
+}
+
+@container add-product (max-width: 680px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@container add-product (max-width: 460px) {
+  .footer {
+    justify-content: stretch;
+    flex-wrap: wrap;
+  }
+}

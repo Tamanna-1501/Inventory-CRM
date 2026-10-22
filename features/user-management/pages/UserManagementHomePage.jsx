@@ -1,0 +1,4 @@
+import Link from 'next/link';
+import { Card,PageHeader } from '@/components/ui';
+import styles from './UserManagementHomePage.module.css';
+export default function UserManagementHomePage(){return <div className={styles.page}><PageHeader title="User Management" description="Manage company users and access roles."/><div className={styles.grid}><Link href="/user-management/user-list"><Card title="User List" description="View, edit, and manage company users."/></Link><Link href="/user-management/add-user"><Card title="Add User" description="Invite a new staff member to your company."/></Link><Link href="/user-management/create-role"><Card title="Create Role" description="Add roles for your team members."/></Link><Link href="/administrative-tools/settings/role-permission"><Card title="Role Permissions" description="Configure module access for each role."/></Link></div></div>;}

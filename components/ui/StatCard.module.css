@@ -1,0 +1,11 @@
+.card { display: flex; min-width: 0; min-height: 148px; height: 100%; box-sizing: border-box; flex-direction: column; padding: var(--space-4); border: 1px solid var(--color-border-strong); border-radius: var(--radius-card); background: var(--color-white); box-shadow: var(--shadow-card); transition: box-shadow var(--duration-normal) var(--ease-standard); }
+.card:hover { box-shadow: var(--shadow-popover); }
+.top { display: flex; flex-direction: var(--stat-layout, row); align-items: center; justify-content: space-between; gap: var(--space-2); color: var(--color-text-muted); font-size: var(--font-size-label); font-weight: 600; }
+.icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px; }
+.icon-brand { color: var(--color-brand); background: var(--color-warning-soft); }
+.icon-star { color: var(--color-warning-text); background: var(--color-warning-soft); }
+.icon-navy { color: var(--color-navy); background: var(--color-info-soft); }
+.icon-price { color: var(--color-price); background: var(--color-danger-soft); }
+.icon-success { color: var(--color-success-text); background: var(--color-success-soft); }
+.value { display: block; max-width: 100%; margin-top: var(--space-3); overflow: hidden; color: var(--color-navy); font-size: clamp(20px, 2vw, 34px); font-variant-numeric: tabular-nums; line-height: 1.1; text-overflow: ellipsis; white-space: nowrap; }
+.change { display: flex; align-items: center; gap: var(--space-1); margin-top: var(--space-2); font-size: var(--font-size-label); }.up { color: var(--color-success-text); }.down { color: var(--color-danger-text); }

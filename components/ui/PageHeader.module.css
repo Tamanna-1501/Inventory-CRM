@@ -1,0 +1,4 @@
+﻿.header { display: grid; gap: var(--space-3); margin-bottom: var(--space-5); }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: var(--space-2); color: var(--color-text-muted); font-size: var(--font-size-label); }.breadcrumbs span + span::before { padding-right: var(--space-2); color: var(--color-text-subtle); content: '/'; }.breadcrumbs a { color: var(--color-navy); text-decoration: underline; text-underline-offset: 2px; }
+.row { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-4); }.copy { min-width: 0; }.copy h1 { margin: 0; font-size: var(--font-size-page-title); }.copy p { margin: var(--space-2) 0 0; color: var(--color-text-muted); font-size: var(--font-size-body); }.actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+@media (max-width: 640px) { .row { flex-direction: column; }.actions { width: 100%; } }

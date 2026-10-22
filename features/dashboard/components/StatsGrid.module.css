@@ -1,0 +1,66 @@
+.grid {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-3);
+}
+
+.stat {
+  min-width: 0;
+  min-height: 148px;
+  --stat-layout: row-reverse;
+}
+
+.grid .stat {
+  box-sizing: border-box;
+  height: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border-strong);
+  border-top: 3px solid var(--color-brand);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.grid .stat:nth-child(2) {
+  border-top-color: var(--color-star);
+}
+
+.grid .stat:nth-child(3) {
+  border-top-color: var(--color-navy);
+}
+
+.grid .stat:nth-child(4) {
+  border-top-color: var(--color-success);
+}
+
+.grid .stat:nth-child(5) {
+  border-top-color: var(--color-price);
+}
+
+.grid .stat:nth-child(6) {
+  border-top-color: var(--color-brand);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2);
+  }
+
+  .stat {
+    min-height: 128px;
+  }
+}
+
+@media (max-width: 380px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

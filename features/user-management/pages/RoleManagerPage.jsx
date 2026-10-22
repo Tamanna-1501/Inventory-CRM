@@ -1,0 +1,15 @@
+'use client';
+import { useEffect, useState } from 'react';
+import { Plus, Trash2 } from 'lucide-react';
+import { Button, Card, ConfirmDialog, DataTable, FormField, Input, ListExportTools, PageHeader, Textarea } from '@/components/ui';
+import { useToast } from '@/context/ToastContext';
+import { createRole, deleteRole, getRoles } from '../services';
+import styles from './RoleManagerPage.module.css';
+
+export default function RoleManagerPage(){const notify=useToast();const [roles,setRoles]=useState([]);const [loading,setLoading]=useState(true);const [busy,setBusy]=useState(false);const [remove,setRemove]=useState(null);const [error,setError]=useState('');
+ const refresh=async()=>{setLoading(true);try{const data=await getRoles();setRoles(Array.isArray(data)?data:[]);setError('');}catch(e){setError(e.message);}finally{setLoading(false);}};useEffect(()=>{refresh();},[]);
+ const submit=async(e)=>{e.preventDefault();const form=e.currentTarget;const fd=new FormData(form);setBusy(true);try{const role=await createRole({name:fd.get('name'),description:fd.get('description')});setRoles(prev=>[...prev,role]);form.reset();notify({title:'Role created',variant:'success'});}catch(e){notify({title:'Could not create role',message:e.message,variant:'danger'});}finally{setBusy(false);}};
+ const confirmDelete=async()=>{setBusy(true);try{await deleteRole(remove.id);setRoles(prev=>prev.filter(r=>r.id!==remove.id));notify({title:'Role deleted',variant:'success'});setRemove(null);}catch(e){setRemove(null);notify({title:'Could not delete role',message:e.message,variant:'danger'});}finally{setBusy(false);}};
+ const roleColumns=[{key:'name',label:'Role',cellClassName:styles.roleCell},{key:'description',label:'Description',cellClassName:styles.descriptionCell,render:v=>v||'—'}];
+ return <div className={styles.page}><PageHeader title="Create Role" description="Add a company role, then configure its permissions."/><div className={styles.layout}><Card title="New role"><form className={styles.form} onSubmit={submit}><FormField label="Role name" required><Input name="name" required maxLength={80}/></FormField><FormField label="Description"><Textarea name="description" rows={4}/></FormField><Button type="submit" loading={busy} leadingIcon={<Plus size={17}/>}>Create role</Button></form></Card><Card title="Company roles"><div className={styles.toolbar}><ListExportTools title="Company roles" fileName="roles" columns={roleColumns} rows={roles}/></div>{error&&<p className={styles.error}>{error}</p>}{loading?<p className={styles.state}>Loading roles…</p>:<DataTable className={styles.rolesTable} caption="Company roles" columns={roleColumns} rows={roles} renderActions={r=><Button size="sm" variant="danger" aria-label={`Delete ${r.name}`} onClick={()=>setRemove(r)}><Trash2 size={16}/></Button>} emptyState="No roles created."/>}</Card></div><ConfirmDialog open={Boolean(remove)} title="Delete role" description={`Delete ${remove?.name}? Roles assigned to users cannot be deleted.`} confirmLabel="Delete" loading={busy} onClose={()=>setRemove(null)} onConfirm={confirmDelete}/></div>;
+}

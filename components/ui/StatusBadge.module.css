@@ -1,0 +1,7 @@
+﻿.badge { display: inline-flex; align-items: center; min-height: 26px; padding: 2px 9px; border: 1px solid transparent; border-radius: var(--radius-pill); font-size: var(--font-size-label); font-weight: 650; line-height: 1.25; white-space: nowrap; }
+.neutral { color: var(--color-navy); border-color: var(--color-border); background: var(--color-surface-subtle); }
+.success, .active, .online, .paid, .completed, .approved { color: var(--color-success-text); background: var(--color-success-soft); }
+.warning, .pending, .low-stock, .processing, .draft { color: var(--color-warning-text); background: var(--color-warning-soft); }
+.partial { color: var(--color-partial); background: var(--color-partial-soft); }
+.danger, .suspended, .inactive, .cancelled, .offline-alert, .overdue, .unpaid { color: var(--color-danger-text); background: var(--color-danger-soft); }
+.info { color: var(--color-navy); background: var(--color-info-soft); }

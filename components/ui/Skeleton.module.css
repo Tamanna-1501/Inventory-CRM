@@ -1,0 +1,5 @@
+﻿.group { display: grid; gap: var(--space-2); }
+.skeleton { display: block; overflow: hidden; border-radius: var(--radius-input); background: linear-gradient(100deg, var(--color-surface-subtle) 20%, var(--color-surface) 42%, var(--color-surface-subtle) 64%); background-size: 220% 100%; animation: shimmer 1.4s ease-in-out infinite; }
+.line { width: 100%; height: 16px; }.text { width: 100%; height: 14px; }.title { width: 58%; height: 24px; }.avatar { width: 44px; height: 44px; border-radius: 50%; }.card { width: 100%; height: 130px; }
+@keyframes shimmer { to { background-position-x: -220%; } }
+@media (prefers-reduced-motion: reduce) { .skeleton { animation: none; } }

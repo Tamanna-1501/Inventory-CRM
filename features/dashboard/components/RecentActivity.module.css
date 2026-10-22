@@ -1,0 +1,11 @@
+.activityCard { border: 1px solid var(--color-border-strong); border-radius: var(--radius-card); background: var(--color-white); box-shadow: var(--shadow-card); }
+.activityCard > :global(header) { align-items: stretch; flex-direction: column; gap: var(--space-3); }
+.activityCard > :global(header) > div:first-child,.activityCard > :global(header) > div:last-child { width: 100%; min-width: 0; }
+.body { padding-top: 0; }
+.tableWrap { max-width: 100%; max-height: 320px; box-sizing: border-box; overflow: auto; overscroll-behavior: contain; border-radius: var(--radius-card); }
+.tableWrap :global(table) { width: 100%; box-sizing: border-box; }
+.tableWrap :global(th),.tableWrap :global(td) { box-sizing: border-box; }
+.statusBadge { text-transform: capitalize; }
+.tabs { width: 100%; max-width: 100%; overflow-x: auto; }
+.tabs button { min-height: 40px; padding-inline: var(--space-2); font-size: var(--font-size-label); white-space: nowrap; }
+@media (max-width: 820px) { .tabs { width: 100%; }.tabs button { flex: 1 0 auto; } }

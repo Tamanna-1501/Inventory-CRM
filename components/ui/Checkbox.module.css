@@ -1,0 +1,10 @@
+﻿.root { display: inline-flex; align-items: flex-start; gap: var(--space-2); min-height: 24px; color: var(--color-text); cursor: pointer; }
+.input { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; clip-path: inset(50%); }
+.mark { position: relative; display: grid; place-items: center; width: 20px; height: 20px; flex: 0 0 20px; margin-top: 2px; border: 1px solid var(--color-border-strong); border-radius: 5px; background: var(--color-white); }
+.input:checked + .mark { border-color: var(--color-navy); background: var(--color-navy); }
+.input:checked + .mark::after { width: 9px; height: 5px; border: solid var(--color-white); border-width: 0 0 2px 2px; content: ''; transform: translateY(-1px) rotate(-45deg); }
+.input:focus-visible + .mark { outline: 2px solid var(--color-brand); outline-offset: 2px; box-shadow: 0 0 0 2px var(--color-white); }
+.input:disabled + .mark { background: var(--color-surface-subtle); }
+.copy { display: grid; gap: 2px; }
+.label { font-size: var(--font-size-label); font-weight: 550; }
+.description { color: var(--color-text-muted); font-size: var(--font-size-label); }

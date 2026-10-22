@@ -1,0 +1,5 @@
+﻿.textarea { display: block; width: 100%; min-height: 104px; padding: var(--space-3); resize: vertical; border: 1px solid var(--color-border-strong); border-radius: var(--radius-input); color: var(--color-text); background: var(--color-white); font-family: var(--font-sans); font-size: var(--font-size-input); line-height: var(--line-height-body); }
+.textarea::placeholder { color: var(--color-text-subtle); opacity: 1; }
+.textarea:focus { border-color: var(--color-brand); outline: 2px solid var(--color-brand); outline-offset: 2px; box-shadow: var(--shadow-focus); }
+.textarea:disabled { color: var(--color-text-muted); background: var(--color-surface-subtle); }
+.invalid { border-color: var(--color-danger); }

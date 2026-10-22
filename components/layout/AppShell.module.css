@@ -1,0 +1,19 @@
+.shell { min-height: 100vh; min-height: 100dvh; background: var(--app-bg); }
+.withBanner { padding-top: 56px; }
+.mainColumn { min-width: 0; min-height: 100vh; min-height: 100dvh; margin-left: 264px; }
+.content { width: 100%; max-width: 1680px; min-width: 0; min-height: calc(100vh - 78px); min-height: calc(100dvh - 78px); margin-inline: auto; padding: clamp(var(--space-4), 2vw, var(--space-6)); }
+.loading { display: grid; min-height: 100vh; min-height: 100dvh; place-items: center; color: var(--color-text-muted); background: var(--app-bg); font-size: var(--font-size-body); }
+.scrim { display: none; }
+.impersonation { position: fixed; inset: 0 0 auto; z-index: 120; min-height: 56px; display: flex; align-items: center; justify-content: center; gap: var(--space-3); flex-wrap: wrap; padding: var(--space-2) var(--space-4); color: var(--color-warning-text); background: var(--color-warning-soft); box-shadow: var(--shadow-card); font-size: var(--font-size-label); font-weight: 700; }
+.impersonation button { min-height: 36px; padding: 0 var(--space-3); border: 1px solid var(--color-brand); border-radius: var(--radius-button); color: var(--color-on-brand); background: var(--color-brand); font: inherit; cursor: pointer; transition: background var(--duration-fast), transform var(--duration-fast); }
+.impersonation button:hover:not(:disabled) { background: var(--color-brand-hover); transform: translateY(-1px); }
+.impersonation button:disabled { opacity: .7; cursor: wait; }
+.withBanner > aside { top: 56px; height: calc(100vh - 56px); height: calc(100dvh - 56px); }
+@media (max-width: 1023px) {
+  .mainColumn { margin-left: 0; }
+  .content { min-height: calc(100vh - 68px); min-height: calc(100dvh - 68px); padding: var(--space-4); }
+  .scrim { display: block; position: fixed; z-index: 79; inset: 0; width: 100%; border: 0; background: var(--color-overlay); }
+  .withBanner .scrim { top: 56px; }
+  .withBanner > aside { top: 56px; height: calc(100vh - 56px); height: calc(100dvh - 56px); }
+}
+@media (max-width: 520px) { .content { padding: var(--space-3); }.impersonation { justify-content: flex-start; padding-inline: var(--space-3); } }

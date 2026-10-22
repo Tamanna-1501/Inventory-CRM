@@ -1,0 +1,16 @@
+﻿.root { position: relative; }
+.trigger { display: flex; min-height: 48px; align-items: center; gap: var(--space-2); padding: 3px var(--space-2); border: 0; border-radius: var(--radius-button); color: var(--color-text); background: transparent; text-align: left; cursor: pointer; }
+.trigger:hover,.trigger[aria-expanded="true"] { background: var(--color-surface-subtle); }
+.avatar { display: grid; width: 38px; height: 38px; flex: 0 0 38px; place-items: center; border-radius: 50%; color: var(--color-white); background: var(--color-navy); font-size: var(--font-size-label); font-weight: 750; }
+.identity { display: grid; max-width: 150px; gap: 2px; }
+.identity strong,.identity small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.identity strong { font-size: var(--font-size-label); }
+.identity small { color: var(--color-text-muted); font-size: var(--font-size-label); }
+.menu { position: absolute; top: calc(100% + 8px); right: 0; z-index: 90; display: grid; width: min(290px, calc(100vw - 24px)); padding: var(--space-2); border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-white); box-shadow: var(--shadow-popover); }
+.menuIdentity,.menu button { display: flex; min-height: 44px; align-items: center; gap: var(--space-2); padding: 0 var(--space-3); border: 0; border-radius: var(--radius-button); color: var(--color-text); background: transparent; text-align: left; font: inherit; font-size: var(--font-size-label); }
+.menuIdentity { overflow: hidden; border-bottom: 1px solid var(--color-border); color: var(--color-text-muted); }
+.menuIdentity span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.menu button { cursor: pointer; }
+.menu button:hover { background: var(--color-surface-subtle); }
+.menu button:disabled { opacity: .65; cursor: wait; }
+@media (max-width: 520px) { .identity { display: none; } }

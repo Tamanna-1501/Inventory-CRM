@@ -1,0 +1,17 @@
+.section { padding: 76px 24px; color: var(--color-white); background: var(--color-navy); }
+.content { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(36px, 8vw, 100px); width: min(100%, 1160px); margin: 0 auto; }
+.eyebrow { margin: 0 0 var(--space-2); color: var(--color-star); font-size: var(--font-size-label); font-weight: 800; letter-spacing: .1em; }
+.content h2 { max-width: 470px; margin: 0; color: var(--color-white); font-size: clamp(30px, 4vw, 43px); letter-spacing: -.02em; line-height: 1.1; }
+.content p:not(.eyebrow) { max-width: 460px; margin: var(--space-3) 0 0; color: var(--color-on-dark-muted); font-size: var(--font-size-body); line-height: 1.65; }
+.list { border-top: 1px solid var(--color-on-dark-border); }
+.row { display: flex; min-height: 58px; align-items: center; gap: var(--space-3); border-bottom: 1px solid var(--color-on-dark-border); transition: transform var(--duration-fast), background var(--duration-fast); }
+.row:hover { transform: scale(.99); background: var(--color-sidebar-hover); }
+.number { color: var(--color-star); font-size: var(--font-size-label); font-weight: 750; }
+.icon { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid var(--color-on-dark-border); border-radius: 9px; color: var(--color-star); }
+.row strong { flex: 1; color: var(--color-white); font-size: var(--font-size-body); font-weight: 650; }
+.arrow { color: var(--color-on-dark-icon); }
+.link { display: flex; width: fit-content; align-items: center; gap: var(--space-2); margin: var(--space-5) auto 0; color: var(--color-white); font-size: var(--font-size-body); font-weight: 700; text-decoration-color: var(--color-brand); text-underline-offset: 5px; }
+.link:hover { color: var(--color-star); }
+.link:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
+@media (max-width: 760px) { .section { padding: 60px 20px; }.content { grid-template-columns: 1fr; gap: var(--space-5); } }
+@media (prefers-reduced-motion: reduce) { .row { transition: none; }.row:hover { transform: none; } }

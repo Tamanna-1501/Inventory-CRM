@@ -1,0 +1,9 @@
+﻿.scroll { width: 100%; overflow: auto; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-white); }
+.scroll:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; box-shadow: 0 0 0 2px var(--color-white); }
+.table { width: 100%; min-width: 640px; border-collapse: separate; border-spacing: 0; color: var(--color-text); text-align: left; font-size: var(--font-size-table); }
+.caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); clip-path: inset(50%); white-space: nowrap; }
+.table th { position: sticky; top: 0; z-index: 1; height: 48px; padding: var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-navy); background: var(--color-surface); font-size: var(--font-size-label); font-weight: 700; white-space: nowrap; }
+.table td { height: var(--table-row-min-height); padding: var(--space-3); border-bottom: 1px solid var(--color-border); font-size: var(--font-size-table); vertical-align: middle; }
+.table tbody tr { background: var(--color-white); transition: background var(--duration-fast); }.table tbody tr:nth-child(even) { background: var(--color-strip); }.table tbody tr:hover { background: var(--color-cream); }.table tbody tr:last-child td { border-bottom: 0; }
+.right { text-align: right; font-variant-numeric: tabular-nums; }.center { text-align: center; }.actionsHeader, .actionsCell { text-align: right; white-space: nowrap; }.actionsCell > * { display: inline-flex; gap: var(--space-2); }
+.empty { height: 100px; color: var(--color-text-muted); text-align: center; }

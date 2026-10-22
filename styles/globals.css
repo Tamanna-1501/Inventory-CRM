@@ -1,0 +1,30 @@
+:root {
+  background: var(--app-bg, var(--color-cream));
+  color: var(--app-text, var(--color-text));
+}
+
+body {
+  min-height: 100vh;
+  background: var(--app-bg, var(--color-cream));
+  color: var(--app-text, var(--color-text));
+}
+
+html.dark {
+  background: var(--app-bg, var(--color-cream));
+  color: var(--app-text, var(--color-text));
+}
+
+a {
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

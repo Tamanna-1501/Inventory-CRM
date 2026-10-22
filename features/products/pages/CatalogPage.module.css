@@ -1,0 +1,1 @@
+.page { display: grid; width: 100%; min-width: 0; max-width: 1680px; gap: var(--space-4); margin: 0 auto; }

@@ -1,0 +1,5 @@
+﻿.summary { min-width: 0; }
+.pagination { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); min-height: 56px; padding: var(--space-2) var(--space-3); color: var(--color-text-muted); font-size: var(--font-size-label); }
+.controls { display: flex; align-items: center; gap: var(--space-2); }.controls span { min-width: 105px; color: var(--color-text); text-align: center; }
+.controls button { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--color-border); border-radius: var(--radius-button); color: var(--color-navy); background: var(--color-white); }.controls button:hover:not(:disabled) { background: var(--color-surface); }.controls button:disabled { color: var(--color-text-subtle); background: var(--color-surface-subtle); }
+@media (max-width: 480px) { .pagination { align-items: flex-start; flex-direction: column; } }

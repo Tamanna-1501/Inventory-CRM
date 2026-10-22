@@ -1,0 +1,11 @@
+﻿.root { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); min-height: 32px; cursor: pointer; }
+.copy { display: grid; gap: 2px; }
+.label { color: var(--color-text); font-size: var(--font-size-label); font-weight: 550; }
+.description { color: var(--color-text-muted); font-size: var(--font-size-label); }
+.input { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); clip-path: inset(50%); }
+.track { display: inline-flex; align-items: center; width: 44px; height: 24px; flex: 0 0 44px; padding: 3px; border: 1px solid var(--color-border-strong); border-radius: var(--radius-pill); background: var(--color-surface-subtle); transition: background var(--duration-fast), border-color var(--duration-fast); }
+.track > span { width: 16px; height: 16px; border-radius: 50%; background: var(--color-white); box-shadow: var(--shadow-card); transition: transform var(--duration-fast) var(--ease-standard); }
+.input:checked + .track { border-color: var(--color-navy); background: var(--color-navy); }
+.input:checked + .track > span { transform: translateX(20px); }
+.input:focus-visible + .track { outline: 2px solid var(--color-brand); outline-offset: 2px; box-shadow: 0 0 0 2px var(--color-white); }
+.input:disabled + .track { opacity: .55; }

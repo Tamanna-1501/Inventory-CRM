@@ -1,0 +1,17 @@
+.section { width: min(100% - 48px, 1200px); margin: 0 auto; padding: 88px 0 96px; }
+.intro { max-width: 650px; margin-bottom: var(--space-6); }
+.eyebrow { margin: 0 0 var(--space-2); color: var(--color-brand-text); font-size: var(--font-size-label); font-weight: 800; letter-spacing: .1em; }
+.intro h2 { margin: 0; color: var(--color-navy); font-size: clamp(30px, 4vw, 42px); letter-spacing: -.02em; line-height: 1.12; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
+.step { position: relative; min-height: 215px; padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-white); box-shadow: var(--shadow-card); animation: step-enter 520ms var(--ease-standard) backwards; transition: transform var(--duration-normal), box-shadow var(--duration-normal); }
+.step:nth-child(2) { animation-delay: 100ms; }.step:nth-child(3) { animation-delay: 200ms; }
+.step:hover { transform: translateY(-2px) scale(.97); border-color: var(--color-brand); box-shadow: var(--shadow-popover); }
+.stepTop { display: flex; align-items: center; justify-content: space-between; }
+.icon { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 14px; color: var(--color-navy); background: var(--color-warning-soft); }
+.number { color: var(--color-brand-text); font-size: var(--font-size-label); font-weight: 800; letter-spacing: .06em; }
+.step h3 { margin: var(--space-4) 0 var(--space-2); color: var(--color-navy); font-size: 20px; }
+.step p { margin: 0; color: var(--color-text-muted); font-size: var(--font-size-body); line-height: 1.6; }
+.connector { position: absolute; top: 50%; right: -25px; z-index: 1; color: var(--color-brand-text); }
+@keyframes step-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 760px) { .section { width: min(100% - 40px, 1200px); padding: 64px 0; }.steps { grid-template-columns: 1fr; }.step { min-height: 0; }.connector { display: none; } }
+@media (prefers-reduced-motion: reduce) { .step { animation: none; transition: none; }.step:hover { transform: none; } }

@@ -1,0 +1,16 @@
+﻿.root { position: relative; }
+.trigger { position: relative; display: grid; width: 44px; height: 44px; place-items: center; border: 0; border-radius: var(--radius-button); color: var(--color-navy); background: transparent; cursor: pointer; }
+.trigger:hover,.trigger[aria-expanded="true"] { background: var(--color-surface-subtle); }
+.badge { position: absolute; top: 1px; right: 0; min-width: 19px; height: 19px; display: grid; place-items: center; padding: 0 4px; border: 2px solid var(--color-white); border-radius: var(--radius-pill); color: var(--color-white); background: var(--color-danger); font-size: var(--font-size-label); font-weight: 700; }
+.popover { position: absolute; top: calc(100% + 10px); right: 0; z-index: 90; width: min(390px, calc(100vw - 24px)); max-width: calc(100vw - 24px); overflow: hidden; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-white); box-shadow: var(--shadow-popover); }
+.header { display: flex; min-height: 54px; align-items: center; justify-content: space-between; gap: var(--space-2); padding: 0 var(--space-4); border-bottom: 1px solid var(--color-border); font-size: var(--font-size-body); }
+.header button { display: flex; min-height: 36px; align-items: center; gap: 6px; padding: 0 var(--space-2); border: 0; border-radius: var(--radius-button); color: var(--color-navy); background: transparent; font: inherit; font-size: var(--font-size-label); cursor: pointer; }
+.header button:hover:not(:disabled) { background: var(--color-surface); }
+.header button:disabled { opacity: .55; cursor: default; }
+.list { max-height: min(65vh, 480px); overflow: auto; }
+.empty { margin: 0; padding: var(--space-6) var(--space-4); color: var(--color-text-muted); text-align: center; font-size: var(--font-size-body); }
+.item { display: grid; gap: 5px; padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--color-border); color: var(--color-text); text-decoration: none; }
+.item:hover { background: var(--color-cream); }
+.item strong { font-size: var(--font-size-body); }
+.item span,.item time { color: var(--color-text-muted); font-size: var(--font-size-label); }
+.unread { border-left: 3px solid var(--color-navy); background: var(--color-surface); }
